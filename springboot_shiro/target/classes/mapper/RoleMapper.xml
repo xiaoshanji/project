@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanji.over.role.mapper.RoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shanji.over.role.entity.Role">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+    </resultMap>
+
+
+    <select id="getPerms" parameterType="integer" resultType="com.shanji.over.perm.entity.Permission">
+        select permission.* from role_perm a left join permission on a.permid=permission.id where a.roleid=#{id}
+    </select>
+
+</mapper>
