@@ -21,7 +21,7 @@ spring:
 
 
   datasource:
-    url: jdbc:mysql://121.196.163.158:3306/xiaoshanshan?useUnicode=true&useSSL=false&characterEncoding=utf-8&serverTimezone=CST
+    url: jdbc:mysql://localhost:3306/xiaoshanshan?useUnicode=true&useSSL=false&characterEncoding=utf-8&serverTimezone=CST
     username: root
     password: Shan19990524*
     driver-class-name: com.mysql.cj.jdbc.Driver
